@@ -1,0 +1,157 @@
+{
+  "config": {
+    "n_estimators": 100,
+    "contamination": 0.05,
+    "random_state": 42,
+    "n_train": 2000,
+    "n_test_normal": 500,
+    "n_test_anom": 125
+  },
+  "metrics": {
+    "accuracy": 0.944,
+    "precision": 0.8169014084507042,
+    "recall": 0.928,
+    "f1": 0.8689138576779026
+  },
+  "confusion": {
+    "tn": 474,
+    "fp": 26,
+    "fn": 9,
+    "tp": 116
+  },
+  "per_pattern_recall": {
+    "tachy+fever": 1.0,
+    "tachycardia": 1.0,
+    "high fever": 0.64,
+    "bradycardia": 1.0,
+    "hypothermia": 1.0
+  },
+  "false_alarm_rate": 0.052,
+  "sweep": [
+    {
+      "contamination": 0.01,
+      "precision": 0.9436619718309859,
+      "recall": 0.536,
+      "f1": 0.6836734693877551,
+      "far": 0.008
+    },
+    {
+      "contamination": 0.02,
+      "precision": 0.8850574712643678,
+      "recall": 0.616,
+      "f1": 0.7264150943396226,
+      "far": 0.02
+    },
+    {
+      "contamination": 0.05,
+      "precision": 0.8169014084507042,
+      "recall": 0.928,
+      "f1": 0.8689138576779026,
+      "far": 0.052
+    },
+    {
+      "contamination": 0.1,
+      "precision": 0.6944444444444444,
+      "recall": 1.0,
+      "f1": 0.819672131147541,
+      "far": 0.11
+    },
+    {
+      "contamination": 0.15,
+      "precision": 0.6127450980392157,
+      "recall": 1.0,
+      "f1": 0.7598784194528876,
+      "far": 0.158
+    }
+  ],
+  "n_est_sweep": [
+    {
+      "n_estimators": 10,
+      "f1": 0.8333333333333334
+    },
+    {
+      "n_estimators": 50,
+      "f1": 0.9037037037037037
+    },
+    {
+      "n_estimators": 100,
+      "f1": 0.8689138576779026
+    },
+    {
+      "n_estimators": 200,
+      "f1": 0.8805970149253731
+    }
+  ],
+  "baseline_rule": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "far": 0.0
+  },
+  "model_size_kb": 1380.3837890625,
+  "train_time_ms": 344.1603700397536,
+  "load_time_ms": 26.79060003720224,
+  "latency_ms": {
+    "mean": 14.25709359999746,
+    "p95": 23.433730041142546,
+    "min": 7.785300025716424
+  },
+  "throughput_per_s": 70.14052289031602,
+  "demo": {
+    "normal": {
+      "pulse": 76,
+      "temp": 36.8,
+      "pred": 1,
+      "score": 0.1934829250800813
+    },
+    "anomaly": {
+      "pulse": 135,
+      "temp": 39.2,
+      "pred": -1,
+      "score": -0.11006192045026886
+    }
+  },
+  "lib_versions": {
+    "python": "3.14.2",
+    "sklearn": "1.8.0",
+    "numpy": "2.4.3",
+    "pandas": "3.0.1"
+  },
+  "opt": [
+    {
+      "n_estimators": 10,
+      "f1": 0.8333333333333334,
+      "size_kb": 143.4775390625,
+      "size_compressed_kb": 41.8466796875,
+      "latency_ms": 2.0317676764292023
+    },
+    {
+      "n_estimators": 25,
+      "f1": 0.8702290076335878,
+      "size_kb": 350.1494140625,
+      "size_compressed_kb": 99.8583984375,
+      "latency_ms": 8.009032336218903
+    },
+    {
+      "n_estimators": 50,
+      "f1": 0.9037037037037037,
+      "size_kb": 685.0244140625,
+      "size_compressed_kb": 193.419921875,
+      "latency_ms": 11.639500667030612
+    },
+    {
+      "n_estimators": 100,
+      "f1": 0.8689138576779026,
+      "size_kb": 1380.3837890625,
+      "size_compressed_kb": 386.673828125,
+      "latency_ms": 73.75154434315239
+    },
+    {
+      "n_estimators": 200,
+      "f1": 0.8805970149253731,
+      "size_kb": 2774.2119140625,
+      "size_compressed_kb": 774.2841796875,
+      "latency_ms": 117.32665533044685
+    }
+  ]
+}
